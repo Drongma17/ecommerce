@@ -6,10 +6,10 @@ Ecommerce online shopping website with
 4. Html
 
 
-# content :-
-login
-logout
-resister
-cart
-product
-search
+# content
+1. Login
+2. Logout
+3. Resister
+4. Cart
+5. Product
+6. Search
