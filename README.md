@@ -4,6 +4,9 @@ Ecommerce online shopping website with
 2. Django 1.11.7
 3. Bootstrap
 4. Html
+5. Pythonanywhere.com
+6. Git
+7. Github
 
 
 # content
