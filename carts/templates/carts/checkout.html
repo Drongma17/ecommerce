@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="container">
+  <h1>Order Summary</h1>
+  <p>Items    : {{ object.cart.total }}</p>
+  <p>Delivery : {{ object.shipping_total }}</p>
+  <p>Total    : {{ object.total }}</p>
+</div>
+
+
+<div class="col my-5">
+
+</div>
+<div class="col my-5">
+
+</div>
+<div class="col my-5">
+
+</div>
+<div class="col my-5 py-5">
+
+</div>
+<div class="col my-5 py-5">
+
+</div>
+{% endblock %}
