@@ -20,12 +20,14 @@ from django.conf.urls import url, include
 from django.contrib import admin
 from django.views.generic import TemplateView
 
-from .views import home_page, contact_page, login_page, register_page, logout_page
+from accounts.views import login_page, register_page, logout_page, guest_register_view
+from .views import home_page, contact_page
 
 urlpatterns = [
     url(r'^$', home_page, name='home'),
     url(r'^contact/$', contact_page, name='contact'),
     url(r'^login/$', login_page, name='login'),
+    url(r'^register/guest/$', guest_register_view, name='guest_register'),
     url(r'^logout/$', logout_page, name='logout'),
     url(r'^register/$', register_page, name='register'),
      url(r'^product/', include("products.urls", namespace='product')),
