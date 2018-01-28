@@ -21,12 +21,15 @@ from django.contrib import admin
 from django.views.generic import TemplateView
 
 from accounts.views import login_page, register_page, logout_page, guest_register_view
+from addresses.views import checkout_address_create_view, checkout_address_reuse_view
 from .views import home_page, contact_page
 
 urlpatterns = [
     url(r'^$', home_page, name='home'),
     url(r'^contact/$', contact_page, name='contact'),
     url(r'^login/$', login_page, name='login'),
+    url(r'^checkout/address/create/$', checkout_address_create_view, name='checkout_address_create'),
+    url(r'^checkout/address/reuse/$', checkout_address_reuse_view, name='checkout_address_reuse'),
     url(r'^register/guest/$', guest_register_view, name='guest_register'),
     url(r'^logout/$', logout_page, name='logout'),
     url(r'^register/$', register_page, name='register'),
