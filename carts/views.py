@@ -83,18 +83,4 @@ def checkout_home(request):
     return render(request, "carts/checkout.html", context)
 
 def checkout_done_view(request):
-    obj = User2.objects.all().get(user=request.user)
-    phone ="+91" + obj.phone
-    user = request.user
-
-    account_sid = "AC0b397f7757a2eca0ef80859ff32ba78f"
-    auth_token = "9cf2929d9bbc973b2f666e7906454c0b"
-    client = Client(account_sid, auth_token)
-
-    message = client.messages.create(
-        phone,
-        body="Thanks for order! Your order will be delivered soon.",
-        from_="+14152379773",
-    )
-    print(message.sid)
     return render(request, "carts/checkout_done.html", {})
