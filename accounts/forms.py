@@ -12,6 +12,7 @@ class LoginForm(forms.Form):
 
 class RegisterForm(forms.Form):
     username  = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","placeholder":"Your username"}))
+    phone     = forms.CharField(widget=forms.TextInput(attrs={"class":"form-control","placeholder":"Your mobile number"}))
     email     = forms.EmailField(widget=forms.EmailInput(attrs={"class":"form-control","placeholder":"Your email"}))
     password  = forms.CharField(widget=forms.PasswordInput(attrs={"class":"form-control","placeholder":"Your password"}))
     password2 = forms.CharField(label="Confirm password",widget=forms.PasswordInput(attrs={"class":"form-control","placeholder":"Confirm your password"}))

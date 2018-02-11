@@ -27,7 +27,8 @@ from .views import home_page, contact_page
 urlpatterns = [
     url(r'^$', home_page, name='home'),
     url(r'^contact/$', contact_page, name='contact'),
-    url(r'^login/$', login_page, name='login'),
+    url(r'^login/', login_page, name='login'),
+    url(r'^oauth/', include('social_django.urls', namespace='social')),
     url(r'^checkout/address/create/$', checkout_address_create_view, name='checkout_address_create'),
     url(r'^checkout/address/reuse/$', checkout_address_reuse_view, name='checkout_address_reuse'),
     url(r'^register/guest/$', guest_register_view, name='guest_register'),

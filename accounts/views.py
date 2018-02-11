@@ -4,7 +4,7 @@ from django.shortcuts import render, redirect
 from django.utils.http import is_safe_url
 
 from .forms import LoginForm, RegisterForm, GuestForm
-from .models import GuestEmail
+from .models import GuestEmail, User2
 
 def guest_register_view(request):
     form = GuestForm(request.POST or None)
@@ -64,8 +64,10 @@ def register_page(request):
     if form.is_valid():
         print(form.cleaned_data)
         username = form.cleaned_data.get("username")
+        phone = form.cleaned_data.get("phone")
         email = form.cleaned_data.get("email")
         password = form.cleaned_data.get("password")
         new_user = User.objects.create_user(username,email,password)
+        User2.objects.create(user=username, phone=phone)
         return redirect("/login/")
     return render(request, "accounts/register.html", context)

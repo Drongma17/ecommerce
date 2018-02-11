@@ -10,7 +10,8 @@ ADDRESS_TYPES = (
 class Address(models.Model):
     billing_profile = models.ForeignKey(BillingProfile)
     address_type    = models.CharField(max_length=120, choices=ADDRESS_TYPES)
-    address  = models.CharField(max_length=120)
+    phone           = models.CharField(max_length=120, default="")
+    address         = models.CharField(max_length=120)
     city            = models.CharField(max_length=120)
     country         = models.CharField(max_length=120, default='India')
     state           = models.CharField(max_length=120)

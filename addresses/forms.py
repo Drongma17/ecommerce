@@ -8,6 +8,7 @@ class AddressForm(forms.ModelForm):
         fields = [
             'billing_profile',
             'address_type',
+            'phone',
             'address',
             'city',
             'country',
@@ -15,7 +16,8 @@ class AddressForm(forms.ModelForm):
             'postal_code'
         ]
         widgets = {
-            'address': forms.TextInput(attrs={"class":"form-control","placeholder":"Your address"}),
+            'phone'         : forms.TextInput(attrs={"class":"form-control","placeholder":"Your mobile number"}),
+            'address'       : forms.TextInput(attrs={"class":"form-control","placeholder":"Your address"}),
             'city'          : forms.TextInput(attrs={"class":"form-control","placeholder":"Your city"}),
             'country'       : forms.TextInput(attrs={"class":"form-control"}),
             'state'         : forms.TextInput(attrs={"class":"form-control","placeholder":"Your state"}),
