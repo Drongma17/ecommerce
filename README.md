@@ -12,7 +12,7 @@ Ecommerce online shopping website with
 # content
 1. Login
 2. Logout
-3. Resister
+3. Register
 4. Cart
 5. Product
 6. Search
